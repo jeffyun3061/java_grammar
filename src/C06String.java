@@ -27,6 +27,7 @@ public class C06String {
 //     String과 int의 형변환 (많이 쓰니 알아둘것)
 //     int a = 10;
 //     String st_a = Integer.toString(a); // "10"
+//     String st_a2 = String.valueOf(a);
 //     int c = Integer.parseInt(st_a); // 10
 
 //     참조자료형에 원시자료형을 담을 때는 wrapper클래스를 써야한다. ex)컬렉션프레임워크(List, set ...)
@@ -217,17 +218,68 @@ public class C06String {
 //        String[] stArr3 = b.split("\\s+");
 //        System.out.println(Arrays.toString(stArr3));
 
-//        isEmpty와 null구분
-        String st1 = null;  //값을 세팅 안하면 String은 null
-        String st2 = "";    //비어있는 값이 아니라 공백을 원할 경우
+////        isEmpty와 null구분
+//        String st1 = null;  //값을 세팅 안하면 String은 null
+//        String st2 = "";    //비어있는 값이 아니라 공백을 원할 경우
+//
+//        System.out.println(st1==null);
+//        System.out.println(st2==null);
+//        System.out.println(st2.isEmpty());
+////        Nullpointer Exception 예외 발생. 비어있어서 어떠한 메소드 사용 못함 비어있는곳 ,값이 null인곳 차이
+//        System.out.println(st1.isEmpty());
 
-        System.out.println(st1==null);
-        System.out.println(st2==null);
-        System.out.println(st2.isEmpty());
-//        Nullpointer Exception 예외 발생. 비어있어서 어떠한 메소드 사용 못함 비어있는곳 ,값이 null인곳 차이
-        System.out.println(st1.isEmpty());
+////        join : String[] -> String
+//        String[] arr = {"java", "python", "c++", "javascript"};
+//        String arrSt = String.join("", arr);
+//        System.out.println(arrSt);
+
+////        StringBuffer
+//        StringBuffer sb1 = new StringBuffer("hello");
+//        System.out.println(sb1);
+//
+//        sb1.append(" world");
+//        System.out.println(sb1);
+//        sb1.insert(5," java");
+//        System.out.println(sb1);
+//        System.out.println(sb1.substring(6,10));
+//        sb1.delete(6,10);
+//        System.out.println(sb1);
+//
+////        성능 : String < StringBuffer < StringBuilder(스레드 safe X)
+//        StringBuilder sb2 = new StringBuilder("hello");
+//        sb2.append(" world");
+//        System.out.println(sb2);
+
+////        프로그래머스 - 문자 반복 출력하기
+//        String my_String = "hello";
+//        int n = 3;
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < my_String.length(); i++) {
+//            for (int j = 0; j < n; j++) {
+//                sb.append(my_String.charAt(i));
+//            }
+//        }
+//        String answer = sb.toString();
+//        System.out.println(answer);
+
+//        프로그래머스 - 문자열 밀기
 
 
+                String A = "hello";
+                String B = "ohell";
+                int answer = -1;
+                StringBuilder sb = new StringBuilder(A);
+                for (int i = 0; i < A.length(); i++) {
+                    if (sb.toString().equals(B)) {
+                        answer = i;
+                        break;
+                    }
+                    sb.insert(0, sb.charAt(sb.length() - 1));
+                    sb.delete(sb.length() - 1, sb.length());
+                }
+                String result = sb.toString();
+                System.out.println(result);
+            }
         }
 
 
@@ -262,6 +314,3 @@ public class C06String {
 
 
 
-
-
-    }
