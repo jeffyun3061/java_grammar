@@ -1,5 +1,7 @@
-//public class study {
-//    public static void main(String[] args) {
+import java.util.Arrays;
+
+public class study {
+    public static void main(String[] args) {
 //
 //        System.out.print("hello, java");
 //
@@ -54,9 +56,25 @@
 //        System.out.println(sb1);
 //        sb2.insert(5,"java");
 //        System.out.println(sb2);
+
+//
+//int x = 10;
+//int y = 20;
+//int k = x + y;
 //
 //
+//        System.out.println(x+y);
+//        System.out.println(x + "입니다.");
+//        System.out.println(k + ":3이다.");
 //
 //
-//    }
-//}
+//        int[] number ={3,2,1,99,100,50,28};
+//        Arrays.sort(number);
+//        System.out.println(Arrays.toString(number));
+
+
+
+//
+
+        }
+}
