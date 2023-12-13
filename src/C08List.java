@@ -84,7 +84,7 @@ public class C08List {
 //
 ////        리스트 출력
 //       List<int[]> myList = new ArrayList<>();
-//       myList.add(new int[3]);
+//       myList.add(new ArrayList<>(Arrays.asList(1,2,3)));
 //       myList.add(new int[3]);
 //       myList.add(new int[3]);
 //
@@ -132,31 +132,31 @@ public class C08List {
 
 //        3.String리스트를 String배열로 변환
 
-    List<String> stList = new ArrayList<>();{
-    stList.add("helo");
-    stList.add("java");
-    stList.add("world");
-    String[] stArr = new String[stList.size()];
-for(int i =0; i<stArr. length; i++){
-    stArr[i] = stList.get(i);
-    }
-
-//3-2) streamAPI : 참고만
-    String[] stArr2 = stList.stream().toArray(a->new String[a]);
-
-//4 int 리스트를 int 배열로 변환
-//4-1) for문으로 변환
-//4-2) streamAPI로 변환
-
-//    두개뽑아서 더하기 : 리스트
-
-        int[] numbers = {2,1,3,4,1}; //2,3,4,5,6,7
-        List<Integer> myList = new ArrayList<>();
-        for(int i=0; 1<numbers.length-1; i++){
-            for(int j=i+1; j<numbers.length; j++){
-                if(!myList.contains(numbers[i]+numbers[j])) {
-                    myList.add(numbers[i] + numbers[j]);
-                }}}
+//    List<String> stList = new ArrayList<>();{
+//    stList.add("helo");
+//    stList.add("java");
+//    stList.add("world");
+//    String[] stArr = new String[stList.size()];
+//for(int i =0; i<stArr. length; i++){
+//    stArr[i] = stList.get(i);
+//    }
+//
+////3-2) streamAPI : 참고만
+//    String[] stArr2 = stList.stream().toArray(a->new String[a]);
+//
+////4 int 리스트를 int 배열로 변환
+////4-1) for문으로 변환
+////4-2) streamAPI로 변환
+//
+////    두개뽑아서 더하기 : 리스트
+//
+//        int[] numbers = {2,1,3,4,1}; //2,3,4,5,6,7
+//        List<Integer> myList = new ArrayList<>();
+//        for(int i=0; 1<numbers.length-1; i++){
+//            for(int j=i+1; j<numbers.length; j++){
+//                if(!myList.contains(numbers[i]+numbers[j])) {
+//                    myList.add(numbers[i] + numbers[j]);
+//                }}}
 
 
 //        n의 배수 고르기 : x % n == 0
@@ -166,4 +166,4 @@ for(int i =0; i<stArr. length; i++){
 
 
     }
-}
+

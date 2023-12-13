@@ -73,8 +73,49 @@ public class study {
 //        System.out.println(Arrays.toString(number));
 
 
+        String name = "홍길동";
 
-//
+        System.out.println(name);
+
+        String str = "나는 \"자바\"를 \\ \'좋아\'합니다.";
+        System.out.println(str);
+
+        String st = "번호\t이름\t나이";
+        System.out.println(st);
+
+        String s = "홍길동\n홍길순";
+        System.out.println(s);
+
+
+        System.out.println("번호\t이름\t직업");
+        System.out.print("행 단위 출력\n");
+        System.out.println("행 단위 출력\n");
+        System.out.println("행 단위 출력");
+        System.out.println("행 단위 출력\n");
+        System.out.println("우리는 \"개발자\" 입니다.");
+        System.out.println("봄\\여름\\가을\\겨울");
+
+        double var1 =5e6;
+        float var2 =5E6f;
+        double var3=1e-3;
+        float var4=1e-3f;
+
+        System.out.println(var1);
+        System.out.println(var2);
+        System.out.println(var3);
+        System.out.println(var4);
+
+
+        boolean stop = true;
+        if(stop) {
+            System.out.println("중지");
+        }else{
+            System.out.println("시작");
 
         }
+
+
+
+    }
+
 }
